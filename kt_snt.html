@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    let a = +prompt('Nhập số a: ');
+    if (isPrime(a)) {
+        document.write(a + ' là số nguyên tố');
+    } else {
+        document.write(a + ' không là số nguyên tố');
+    }
+    function isPrime(checked_number) {
+        if (checked_number < 2) {
+            return false;
+        } else {
+            for (let i=2; i <= Math.sqrt(checked_number); i++) {
+                if (checked_number % i === 0)
+                    return false;
+            }
+            return true;
+        }
+    }
+</script>
+</body>
+</html>
